@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Visualização dos dados</title>
+    </head>
+    <body>
+        <h1>Enviar arquivo CSV</h1>
+        <form action="/display" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit">
+        </form>
+    </body>
+</html>
+
+
+<!--
+O atributo action dentro de um elemento <form> em HTML é usado para especificar a URL para a qual os dados do formulário serão enviados 
+quando o usuário clicar no botão "Submit"
+
+Sim, o atributo action no <form> precisa de uma função no servidor para processar a requisição que ele gera.
+
+No entanto, essa função não é explicitamente parte do action no HTML; o action apenas especifica para onde a requisição vai, 
+
+enquanto o servidor precisa de uma função ou rota configurada para tratar essa requisição.
+
+
+A action no HTML não faz o processamento por si só. Ele apenas direciona a requisição para uma URL no servidor.
+O servidor (por exemplo, com Flask) precisa ter uma função ou controlador configurado para a rota (/display) para receber e processar a requisição.
+Sem uma função no servidor, a requisição feita pelo formulário chegaria a uma URL sem tratamento, resultando em erro (como 404 Not Found ou 405 Method Not Allowed).
+Portanto, sim, o action depende de uma função no servidor para fazer o processamento adequado dos dados enviados pelo formulário.
+-->
